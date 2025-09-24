@@ -11,20 +11,20 @@ public class PocFeaturesJava25Application {
 
 
 		System.out.println("-> Structured concurrency example");
-		StructuredConcurrencyExample.runExample();
+		StructuredConcurrency.runExample();
 
 
 		System.out.println("\n-> Scoped values example");
-		ScopedValuesExample.runExample();
+		ScopedValues.runExample();
 
 
 		System.out.println("\n-> Flexible constructor example");
-		FlexibleConstructorExample demo = new FlexibleConstructorExample(42);
+		FlexibleConstructor demo = new FlexibleConstructor(42);
 		System.out.println(" instance created with value = " + demo.getValue());
 
 
 		System.out.println("\n-> Primitive pattern example");
-		PrimitivePatternExample.runExample();
+		PrimitivePattern.runExample();
 
 
 		System.out.println("\n-> Vector API example (if module available)");
