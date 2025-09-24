@@ -3,13 +3,13 @@ package com.myprojecticaro.poc_features_java_25.features;
 import java.util.concurrent.Executors;
 
 public class ScopedValues {
-    // ScopedValue API (estilo JDK 21+) — cria um valor imutável ligado a um escopo
+    
     public static final ScopedValue<String> CONTEXT = java.lang.ScopedValue.newInstance();
 
 
     public static void runExample() {
         var runnable = (Runnable) () -> {
-            // dentro do scope o valor está disponível
+           
             System.out.println(" scoped value inside thread: " + CONTEXT.get());
         };
 
@@ -42,12 +42,12 @@ public class ScopedValues {
 
 
         public FlexibleConstructorExample(int value) {
-        // validações e lógica *antes* do super(...) — JEP 513 (flexible constructor bodies)
+     
         if (value < 0) {
         throw new IllegalArgumentException("value must be >= 0");
         }
-        this.value = value * 1; // lógica adicional possível
-        super(value); // chamada ao construtor da superclasse após pré-validação
+        this.value = value * 1; 
+        super(value);
         }
 
 
