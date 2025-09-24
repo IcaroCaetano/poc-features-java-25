@@ -1,4 +1,4 @@
-
+package com.myprojecticaro.poc_features_java_25.features;
 
 import jdk.incubator.vector.IntVector;
 import jdk.incubator.vector.VectorSpecies;
