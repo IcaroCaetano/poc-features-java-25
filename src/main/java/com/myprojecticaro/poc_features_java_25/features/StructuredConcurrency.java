@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class StructuredConcurrency {
     public static void runExample() throws InterruptedException {
-// Exemplo básico usando StructuredTaskScope (preview API)
+
         try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
             var futures = new ArrayList<java.util.concurrent.Future<String>>();
 
@@ -24,8 +24,8 @@ public class StructuredConcurrency {
             }));
 
 
-            scope.join(); // aguarda término das subtarefas
-            scope.throwIfFailed(); // lança exceção se alguma falhou
+            scope.join(); 
+            scope.throwIfFailed();
 
 
             for (var f : futures) {
