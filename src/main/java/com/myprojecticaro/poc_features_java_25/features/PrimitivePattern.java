@@ -1,6 +1,6 @@
 package com.myprojecticaro.poc_features_java_25.features;
 
-public class PrimitivePatternExample {
+public class PrimitivePattern {
   
   public static void runExample() {
   

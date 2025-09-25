@@ -4,7 +4,7 @@ import jdk.incubator.vector.IntVector;
 import jdk.incubator.vector.VectorSpecies;
 
 
-public class VectorApiExample {
+public class VectorApi {
 
 private static final VectorSpecies<Integer> SPECIES = IntVector.SPECIES_PREFERRED;
 

@@ -1,6 +1,6 @@
 package com.myprojecticaro.poc_features_java_25;
 
-import org.springframework.boot.SpringApplication;
+import com.myprojecticaro.poc_features_java_25.features.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
@@ -28,7 +28,7 @@ public class PocFeaturesJava25Application {
 
 
 		System.out.println("\n-> Vector API example (if module available)");
-		VectorApiExample.runExample();
+		VectorApi.runExample();
 
 
 		System.out.println("\n-> PEM utilities example (simple wrapper)");

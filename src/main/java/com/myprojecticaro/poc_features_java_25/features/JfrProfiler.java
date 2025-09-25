@@ -1,6 +1,6 @@
 package com.myprojecticaro.poc_features_java_25.features;
 
-public class JfrProfilerExample {
+public class JfrProfiler {
 
   public static void startRecording() {
 

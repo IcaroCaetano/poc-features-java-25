@@ -1,26 +1,12 @@
 package com.myprojecticaro.poc_features_java_25.features;
 
-class ParentForFlexible {
 
-  private final int value;
-
-  ParentForFlexible(int value) {
-
-    this.value = value;
-
-  }
-
-  public int getValue() { return value; }
-
-}
-
-
-public class FlexibleConstructorExample extends ParentForFlexible {
+public class FlexibleConstructor extends ParentForFlexible {
 
   private final int value;
 
 
-public FlexibleConstructorExample(int value) {
+public FlexibleConstructor(int value) {
   
   if (value < 0) {
 

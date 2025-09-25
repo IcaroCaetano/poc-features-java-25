@@ -2,7 +2,6 @@ package com.myprojecticaro.poc_features_java_25.features;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.StructuredTaskScope;
-import java.util.List;
 import java.util.ArrayList;
 
 public class StructuredConcurrency {
