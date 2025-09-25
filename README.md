@@ -57,3 +57,61 @@ java --enable-preview -cp src com.example.poc.MainApp
 ## Running the Examples
 
 1 - Clone the repository and ensure JDK 25 is installed.
+
+2 - Compile with preview features enabled:
+
+```
+javac --release 25 --enable-preview -source 25 $(find src -name "*.java")
+```
+
+3 - Run the main application:
+
+```
+
+java --enable-preview -cp src com.example.poc.MainApp
+```
+
+4 - To include the Vector API demo, add:
+
+```
+--add-modules jdk.incubator.vector
+```
+
+## Example Output
+
+```
+POC Java 25 - Running examples
+
+
+-> Structured concurrency example
+-> result-1
+-> result-2
+
+
+-> Scoped values example
+scoped value inside thread: user-123
+
+
+-> Flexible constructor example
+instance created with value = 42
+
+
+-> Primitive pattern example
+-> int: 10
+-> double: 3.14
+-> string: hello
+-> short: 7
+
+
+-> Vector API example (if module available)
+vector add result: 11 22 33 44 ...
+
+
+-> PEM utilities example (simple wrapper)
+-----BEGIN TEST-KEY-----
+abc123
+-----END TEST-KEY-----
+
+
+POC finished
+```
