@@ -25,15 +25,16 @@ This repository contains a Proof of Concept (POC) project demonstrating the most
 
 ```
 
-src/main/java/com/example/poc/
-├── MainApp.java # Entry point running all examples
-├── StructuredConcurrency.java
-├── ScopedValues.java
-├── FlexibleConstructor.java
-├── PrimitivePattern.java
-├── VectorApi.java
-├── PemUtils.java
-└── JfrProfiler.java
+src/main/java/com/myprojecticaro/poc_features_java_25
+    ├── MainApp.java # Entry point running all examples
+    ├── features
+          ├── StructuredConcurrency.java
+          ├── ScopedValues.java
+          ├── FlexibleConstructor.java
+          ├── PrimitivePattern.java
+          ├── VectorApi.java
+          ├── PemUtils.java
+          └── JfrProfiler.java
 ```
 
 ## Requirements
