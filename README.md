@@ -19,3 +19,41 @@ This repository contains a Proof of Concept (POC) project demonstrating the most
 - Compact Source Files & Instance Main Methods (Final) — Create small utility programs with reduced boilerplate.
 
 - JFR Profiling Improvements — Hooks for leveraging Java Flight Recorder to measure execution time and performance.
+
+
+## Project Structure
+
+```
+
+src/main/java/com/example/poc/
+├── MainApp.java # Entry point running all examples
+├── StructuredConcurrency.java
+├── ScopedValues.java
+├── FlexibleConstructor.java
+├── PrimitivePattern.java
+├── VectorApi.java
+├── PemUtils.java
+└── JfrProfiler.java
+```
+
+## Requirements
+
+- JDK 25 (Early Access or GA version)
+
+- Enable preview features:
+
+```
+
+javac --release 25 --enable-preview -source 25 $(find src -name "*.java")
+java --enable-preview -cp src com.example.poc.MainApp
+```
+
+- For the Vector API:
+
+```
+--add-modules jdk.incubator.vector
+```
+
+## Running the Examples
+
+1 - Clone the repository and ensure JDK 25 is installed.
