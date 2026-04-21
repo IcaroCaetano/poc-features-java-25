@@ -113,6 +113,12 @@ vector add result: 11 22 33 44 ...
 abc123
 -----END TEST-KEY-----
 
-
-POC finished
 ```
+
+## References:
+
+https://docs.oracle.com/en/java/javase/25/docs/specs/index.html
+
+https://blogs.oracle.com/java/the-arrival-of-java-25
+
+https://docs.oracle.com/en/java/javase/25/language/java-language-changes-summary.html

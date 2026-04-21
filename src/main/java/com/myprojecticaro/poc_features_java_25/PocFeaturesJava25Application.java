@@ -1,17 +1,11 @@
 package com.myprojecticaro.poc_features_java_25;
 
 import com.myprojecticaro.poc_features_java_25.features.v1.*;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
 public class PocFeaturesJava25Application {
 
 	public static void main(String[] args) throws Exception {
 		System.out.println("POC Java 25 - Running examples\n");
-
-
-		System.out.println("-> Structured concurrency example");
-		StructuredConcurrency.runExample();
 
 
 		System.out.println("\n-> Scoped values example");
@@ -25,10 +19,6 @@ public class PocFeaturesJava25Application {
 
 		System.out.println("\n-> Primitive pattern example");
 		PrimitivePattern.runExample();
-
-
-		System.out.println("\n-> Vector API example (if module available)");
-		VectorApi.runExample();
 
 
 		System.out.println("\n-> PEM utilities example (simple wrapper)");

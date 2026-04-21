@@ -11,7 +11,6 @@ public class PrimitivePattern {
     String result = switch (o) { 
     case int i -> "int: " + i;
     case double d -> "double: " + d;
-    case short s -> "short: " + s;
     case String s -> "string: " + s;
     default -> "unknown: " + o;
   };
