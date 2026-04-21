@@ -1,4 +1,4 @@
-package com.myprojecticaro.poc_features_java_25.features;
+package com.myprojecticaro.poc_features_java_25.features.v1;
 
 import java.util.concurrent.Executors;
 
@@ -55,7 +55,7 @@ public class ScopedValues {
         }
     }
 
-    public static class FlexibleConstructorExample extends com.myprojecticaro.poc_features_java_25.features.ParentForFlexible {
+    public static class FlexibleConstructorExample extends com.myprojecticaro.poc_features_java_25.features.v1.ParentForFlexible {
     private final int value;
 
 

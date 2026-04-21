@@ -1,4 +1,4 @@
-package com.myprojecticaro.poc_features_java_25.features;
+package com.myprojecticaro.poc_features_java_25.features.v1;
 
 import java.util.Base64;
 

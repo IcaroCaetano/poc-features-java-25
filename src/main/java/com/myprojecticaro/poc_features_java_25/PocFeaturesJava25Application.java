@@ -1,6 +1,6 @@
 package com.myprojecticaro.poc_features_java_25;
 
-import com.myprojecticaro.poc_features_java_25.features.*;
+import com.myprojecticaro.poc_features_java_25.features.v1.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
