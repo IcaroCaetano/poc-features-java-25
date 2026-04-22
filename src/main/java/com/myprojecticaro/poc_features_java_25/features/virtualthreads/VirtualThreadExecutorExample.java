@@ -7,6 +7,7 @@ import java.util.stream.IntStream;
 public class VirtualThreadExecutorExample {
 
     public void run() {
+        System.out.println("Start Virtual Thread Executor");
         try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
             IntStream.range(0, 10_000).forEach(i ->
@@ -15,5 +16,6 @@ public class VirtualThreadExecutorExample {
                 })
             );
         }
+        System.out.println("End Virtual Thread Executor");
     }
 }
