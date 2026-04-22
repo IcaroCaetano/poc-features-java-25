@@ -37,6 +37,17 @@ ExecutorService executor =  Executors.newVirtualThreadPerTaskExecutor();
  );
 ````
 
+#### Quando ela “dorme” (ex: Thread.sleep)
+1. Virtual Thread A é pausada
+2. Estado dela é salvo no heap (não na thread real!)
+3. Carrier Thread 1 é liberada
+4. JVM escolhe outra virtual thread
+5. Virtual Thread B começa a rodar no mesmo carrier
+
+
+Uma thread real (carrier) executa uma virtual thread por vez. Quando a virtual thread bloqueia, a JVM salva seu 
+estado no heap, libera a thread real, e agenda outra virtual thread para execução.
+
 - Blocking sem custo alto
 
 - Scoped Values
