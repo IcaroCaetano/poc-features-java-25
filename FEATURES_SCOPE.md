@@ -2,7 +2,7 @@
 
 ## Features
 
-- Virtual Threads
+### Virtual Threads
 
 Virtual Threads são threads leves gerenciadas pela JVM, não pelo sistema operacional.
 
@@ -11,7 +11,7 @@ Virtual Threads são threads leves gerenciadas pela JVM, não pelo sistema opera
     - Gerenciados pela JVM
 
 
-⚙️ Comparação essencial
+#### ⚙️ Comparação essencial
 
 ------------------------------------------------------------------------------
 |Tipo de Thread-----|---Quem gerencia------|----Custo-----|----Escalabilidade-|
@@ -53,6 +53,10 @@ Obs: Heap é a área de memória onde vivem os objetos criados pela JVM.
 
 - Blocking sem custo alto
 
-- Scoped Values
+### Structured Concurrency
 
-- 
+-  StructuredTaskScope.open()
+
+Resolve o problema de desorganização. As threads iniciam, executam, fecha
+e tudo termina junto. De forma organizada e estruturada. Pois elas vivem dentro 
+de um unico bloco.

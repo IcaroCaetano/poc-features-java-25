@@ -6,19 +6,26 @@ public class StructuredConcurrencyBasicExample {
 
     public void run() throws Exception {
 
-        try (var scope = StructuredTaskScope.open()) {
+        System.out.println("StructuredConcurrencyBasicExample Start");
+        long start = System.currentTimeMillis();
 
-            var user = scope.fork(this::fetchUser);
-            var order = scope.fork(this::fetchOrder);
+        // Controle de ciclo de vida com concorrência = estruturada e previsível
+            try (var scope = StructuredTaskScope.open()) {
 
-            scope.join();
+                var user = scope.fork(this::fetchUser);
+                var order = scope.fork(this::fetchOrder);
 
-            String userResult = user.get();
-            String orderResult = order.get();
+                scope.join();
 
-            System.out.println("User: " + userResult);
-            System.out.println("Order: " + orderResult);
-        }
+                String userResult = user.get();
+                String orderResult = order.get();
+
+                System.out.println("User: " + userResult);
+                System.out.println("Order: " + orderResult);
+            }
+
+        long end = System.currentTimeMillis();
+        System.out.println("StructuredConcurrencyBasicExample End " + + (end - start));
     }
 
     private String fetchUser() throws InterruptedException {
