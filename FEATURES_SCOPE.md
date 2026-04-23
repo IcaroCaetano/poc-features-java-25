@@ -60,3 +60,9 @@ Obs: Heap é a área de memória onde vivem os objetos criados pela JVM.
 Resolve o problema de desorganização. As threads iniciam, executam, fecha
 e tudo termina junto. De forma organizada e estruturada. Pois elas vivem dentro 
 de um unico bloco.
+
+- foi criado para organizar concorrência
+- evita vazamento de threads
+- centraliza controle
+- melhora legibilidade
+- torna o comportamento previsível
