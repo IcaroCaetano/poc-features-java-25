@@ -10,7 +10,7 @@ public class VirtualThreadVsPlatformExample {
         long startPlatform = System.currentTimeMillis();
 
         try (ExecutorService executor = Executors.newFixedThreadPool(10)) {
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 10000; i++) {
                 executor.submit(this::blockingTask);
             }
         }
@@ -20,7 +20,7 @@ public class VirtualThreadVsPlatformExample {
         long startVirtual = System.currentTimeMillis();
 
         try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 10000; i++) {
                 executor.submit(this::blockingTask);
             }
         }
@@ -29,6 +29,13 @@ public class VirtualThreadVsPlatformExample {
 
         System.out.println("Platform Threads: " + (endPlatform - startPlatform));
         System.out.println("Virtual Threads: " + (endVirtual - startVirtual));
+
+        /**
+         * Saida:
+         *
+         * Platform Threads: 100754
+         * Virtual Threads: 176
+         */
     }
 
     private void blockingTask() {
