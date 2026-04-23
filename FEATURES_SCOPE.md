@@ -8,6 +8,7 @@ Virtual Threads são threads leves gerenciadas pela JVM, não pelo sistema opera
 
     - Threads leves (lightweight)
     - Escalabilidade massiva
+    - Gerenciados pela JVM
 
 
 ⚙️ Comparação essencial
@@ -17,7 +18,7 @@ Virtual Threads são threads leves gerenciadas pela JVM, não pelo sistema opera
 
 |-----------------------------------------------------------------------------|
 
-|Platform Thread----|--Sistema Operaciona--|--Alto--------|----Baixa----------|
+|Platform Thread----|--Sistema Operacional--|--Alto--------|----Baixa----------|
 
 |-----------------------------------------------------------------------------|
 
@@ -47,6 +48,8 @@ ExecutorService executor =  Executors.newVirtualThreadPerTaskExecutor();
 
 Uma thread real (carrier) executa uma virtual thread por vez. Quando a virtual thread bloqueia, a JVM salva seu 
 estado no heap, libera a thread real, e agenda outra virtual thread para execução.
+
+Obs: Heap é a área de memória onde vivem os objetos criados pela JVM.
 
 - Blocking sem custo alto
 
