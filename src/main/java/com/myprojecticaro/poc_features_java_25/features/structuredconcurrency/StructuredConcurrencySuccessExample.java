@@ -23,6 +23,13 @@ public class StructuredConcurrencySuccessExample {
 
             System.out.println("First result: " + result);
         }
+
+        /**
+         * Saida:
+         *
+         * === SUCCESS ===
+         * First result: Fast result
+         */
     }
 
     private String fastTask() throws InterruptedException {
