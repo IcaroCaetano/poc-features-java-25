@@ -12,6 +12,7 @@ public class StructuredConcurrencyBasicExample {
         // Controle de ciclo de vida com concorrência = estruturada e previsível
             try (var scope = StructuredTaskScope.open()) {
 
+                // fork - Cria e inicia uma tarefa concorrente dentro do escopo
                 var user = scope.fork(this::fetchUser);
                 var order = scope.fork(this::fetchOrder);
 

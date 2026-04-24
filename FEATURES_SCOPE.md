@@ -66,3 +66,10 @@ de um unico bloco.
 - centraliza controle
 - melhora legibilidade
 - torna o comportamento previsível
+
+- scope.fork(..)
+
+1. Você chama fork()
+2. A JVM cria uma Virtual Thread
+3. Essa Virtual Thread executa sua função (fetchUser)
+4. O resultado/erro é armazenado no Subtask
