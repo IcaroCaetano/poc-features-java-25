@@ -6,6 +6,7 @@ public class StructuredConcurrencyFailureExample {
 
     public void run() {
 
+        System.out.println("StructuredConcurrencyFailureExample Start");
         try (var scope = StructuredTaskScope.open()) {
 
             var user = scope.fork(this::fetchUser);
@@ -20,6 +21,8 @@ public class StructuredConcurrencyFailureExample {
         } catch (Exception e) {
             System.out.println("Error handled: " + e.getMessage());
         }
+
+        System.out.println("StructuredConcurrencyFailureExample End");
     }
 
     private String fetchUser() throws InterruptedException {
