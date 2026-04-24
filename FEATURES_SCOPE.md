@@ -55,7 +55,7 @@ Obs: Heap é a área de memória onde vivem os objetos criados pela JVM.
 
 ### Structured Concurrency
 
--  StructuredTaskScope.open()
+#### StructuredTaskScope.open()
 
 Resolve o problema de desorganização. As threads iniciam, executam, fecha
 e tudo termina junto. De forma organizada e estruturada. Pois elas vivem dentro 
@@ -67,9 +67,16 @@ de um unico bloco.
 - melhora legibilidade
 - torna o comportamento previsível
 
-- scope.fork(..)
+#### scope.fork(..)
 
 1. Você chama fork()
 2. A JVM cria uma Virtual Thread
 3. Essa Virtual Thread executa sua função (fetchUser)
 4. O resultado/erro é armazenado no Subtask
+
+
+E quando a tarefa bloqueia?
+Virtual Thread pausa
+→ JVM salva estado no heap
+→ libera carrier thread
+→ outra virtual thread executa
