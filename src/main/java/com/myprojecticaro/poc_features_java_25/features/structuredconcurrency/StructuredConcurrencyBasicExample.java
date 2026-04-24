@@ -16,6 +16,7 @@ public class StructuredConcurrencyBasicExample {
                 var user = scope.fork(this::fetchUser);
                 var order = scope.fork(this::fetchOrder);
 
+                //join - funciona como um ponto de sincronização
                 scope.join();
 
                 String userResult = user.get();

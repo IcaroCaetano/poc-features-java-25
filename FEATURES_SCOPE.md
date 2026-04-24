@@ -80,3 +80,59 @@ Virtual Thread pausa
 → JVM salva estado no heap
 → libera carrier thread
 → outra virtual thread executa
+
+Subtask = um “handle” (controle) de uma tarefa concorrente
+
+Subtask
+├── referência da execução (virtual thread)
+├── estado da tarefa
+├── resultado (quando terminar)
+└── erro (se falhar)
+
+
+A Subtask existe pra você poder:
+Pegar o resultado
+
+````java
+user.get();
+````
+
+Saber o estado
+
+````java
+user.state();
+````
+
+Exemp:
+
+SUCCESS
+FAILED
+RUNNING
+
+##### 🧠 Insight importante
+
+👉 A Subtask NÃO é a thread
+👉 NÃO é a execução
+
+Ela é:
+
+o objeto que te permite acompanhar e acessar essa execução
+
+#### escope.join()
+
+Bloqueia a thread atual até TODAS as subtasks terminarem
+"espera todas as tarefas que eu dei fork terminarem"
+
+````java
+var user = scope.fork(this::fetchUser);
+var order = scope.fork(this::fetchOrder);
+
+scope.join();
+````
+
+````
+1. você criou 2 subtasks
+2. ambas estão rodando (virtual threads)
+3. join() entra em espera
+4. só continua quando TODAS terminarem
+````
