@@ -28,6 +28,15 @@ public class StructuredConcurrencyBasicExample {
 
         long end = System.currentTimeMillis();
         System.out.println("StructuredConcurrencyBasicExample End " + + (end - start));
+
+        /**
+         * Saida:
+         *
+         * StructuredConcurrencyBasicExample Start
+         * User: User fetched
+         * Order: Order fetched
+         * StructuredConcurrencyBasicExample End 1221
+         */
     }
 
     private String fetchUser() throws InterruptedException {
