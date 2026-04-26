@@ -122,3 +122,4 @@ https://docs.oracle.com/en/java/javase/25/docs/specs/index.html
 https://blogs.oracle.com/java/the-arrival-of-java-25
 
 https://docs.oracle.com/en/java/javase/25/language/java-language-changes-summary.html
+
