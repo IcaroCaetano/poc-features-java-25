@@ -120,6 +120,7 @@ o objeto que te permite acompanhar e acessar essa execução
 
 #### escope.join()
 
+
 Bloqueia a thread atual até TODAS as subtasks terminarem
 "espera todas as tarefas que eu dei fork terminarem"
 
