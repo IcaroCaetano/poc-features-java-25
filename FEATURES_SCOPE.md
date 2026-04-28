@@ -137,3 +137,8 @@ scope.join();
 3. join() entra em espera
 4. só continua quando TODAS terminarem
 ````
+
+### Scoped Values
+
+Permitem passar “contexto” implicitamente para chamadas profundas, mas de forma delimitada por escopo, previsível e segura.
+
