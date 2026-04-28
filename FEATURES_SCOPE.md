@@ -142,3 +142,7 @@ scope.join();
 
 Permitem passar “contexto” implicitamente para chamadas profundas, mas de forma delimitada por escopo, previsível e segura.
 
+- Imutáveis
+- Limitados a um escopo bem definido
+- Compatíveis com Virtual Threads e Structured Concurrency
+
