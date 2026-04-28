@@ -149,6 +149,7 @@ Permitem passar “contexto” implicitamente para chamadas profundas, mas de fo
 #### 1️⃣ Contexto fica associado a um escopo, não a uma thread
 
 Ou seja:
+
 • existe somente dentro do bloco definido
 • não pode escapar dele
 • não pode ser alterado
