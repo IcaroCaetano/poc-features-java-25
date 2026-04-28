@@ -153,3 +153,14 @@ Ou seja:
 • não pode escapar dele
 • não pode ser alterado
 
+#### 2️⃣ Binding explícito e estruturado
+
+Você sempre declara onde o valor passa a existir:
+
+```java
+ScopedValue.where(CONTEXT, value).run(() -> {
+    // aqui o valor é visível
+});
+```
+
+#### 3️⃣ Imutabilidade por design
