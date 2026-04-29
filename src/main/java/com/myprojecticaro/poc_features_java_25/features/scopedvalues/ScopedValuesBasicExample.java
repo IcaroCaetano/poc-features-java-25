@@ -4,8 +4,7 @@ import java.lang.ScopedValue;
 
 public class ScopedValuesBasicExample {
 
-    private static final ScopedValue<RequestContext> CONTEXT =
-            ScopedValue.newInstance();
+    private static final ScopedValue<RequestContext> CONTEXT = ScopedValue.newInstance();
 
     public void run() {
         System.out.println("Running basic scoped value example");
