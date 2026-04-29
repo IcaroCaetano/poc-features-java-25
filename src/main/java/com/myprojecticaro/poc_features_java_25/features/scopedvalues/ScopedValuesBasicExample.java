@@ -22,9 +22,7 @@ public class ScopedValuesBasicExample {
 
     private void repositoryLayer() {
         RequestContext context = CONTEXT.get();
-        System.out.println(
-                "Context available in repository: " + context
-        );
+        System.out.println("Context available in repository: " + context);
     }
 }
 
