@@ -142,7 +142,7 @@ scope.join();
 
 Permitem passar “contexto” implicitamente para chamadas profundas, mas de forma delimitada por escopo, previsível e segura.
 
-Subistituiu as ThreadLocal que eram mutaveis e global por thread.
+Subistituiu as ThreadLocal que eram mutaveis e global por thread. E causavam vazamento de contexto.
 
 - Imutáveis
 - Limitados a um escopo bem definido
