@@ -10,6 +10,7 @@ public class ScopedValuesBasicExample {
     public void run() {
         System.out.println("Running basic scoped value example");
 
+        // where associa um valor imutavel (CONTEXT) a um scoped value
         ScopedValue.where(
                 CONTEXT,
                 new RequestContext("req-123", "icaro")
