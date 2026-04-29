@@ -16,6 +16,7 @@ public class ScopedValuesBasicExample {
         ).run(this::serviceLayer);
     }
 
+    // simula a camada de servico
     private void serviceLayer() {
         repositoryLayer();
     }
