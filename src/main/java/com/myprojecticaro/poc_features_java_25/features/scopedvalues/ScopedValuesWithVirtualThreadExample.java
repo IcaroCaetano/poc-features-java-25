@@ -5,8 +5,7 @@ import java.util.concurrent.Executors;
 
 public class ScopedValuesWithVirtualThreadExample {
 
-    private static final ScopedValue<RequestContext> CONTEXT =
-            ScopedValue.newInstance();
+    private static final ScopedValue<RequestContext> CONTEXT = ScopedValue.newInstance();
 
     public void run() throws Exception {
         System.out.println("Running scoped values with virtual threads");
@@ -23,9 +22,7 @@ public class ScopedValuesWithVirtualThreadExample {
     }
 
     private void asyncOperation() {
-        System.out.println(
-                "Virtual Thread context: " + CONTEXT.get()
-        );
+        System.out.println("Virtual Thread context: " + CONTEXT.get());
     }
 }
 
