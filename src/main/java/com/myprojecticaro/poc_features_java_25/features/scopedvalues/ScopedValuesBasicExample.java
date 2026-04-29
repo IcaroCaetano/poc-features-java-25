@@ -10,6 +10,7 @@ public class ScopedValuesBasicExample {
         System.out.println("Running basic scoped value example");
 
         // where associa um valor imutavel (CONTEXT) a um scoped value
+        // representa um idenficador do escopo, ou seja um objeto do tipo ScopedValue<RequestContext>
         ScopedValue.where(
                 CONTEXT,
                 new RequestContext("req-123", "icaro")
