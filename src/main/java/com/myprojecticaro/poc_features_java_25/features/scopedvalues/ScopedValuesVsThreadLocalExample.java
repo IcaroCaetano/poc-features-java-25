@@ -4,11 +4,9 @@ import java.lang.ScopedValue;
 
 public class ScopedValuesVsThreadLocalExample {
 
-    private static final ThreadLocal<String> THREAD_LOCAL =
-            new ThreadLocal<>();
+    private static final ThreadLocal<String> THREAD_LOCAL = new ThreadLocal<>();
 
-    private static final ScopedValue<String> SCOPED =
-            ScopedValue.newInstance();
+    private static final ScopedValue<String> SCOPED = ScopedValue.newInstance();
 
     public void run() {
         System.out.println("Comparing ThreadLocal vs ScopedValue");
