@@ -213,3 +213,22 @@ ScopedValue.where(CONTEXT, ctx).run(() -> {
     });
 });
 ```
+#### 5️⃣ Integração natural com Structured Concurrency
+
+Scoped Values brilham quando usados com Structured Concurrency.
+
+Tudo que for executado dentro do mesmo escopo estruturado:
+
+- enxerga o mesmo contexto
+- respeita o mesmo ciclo de vida
+- falha e finaliza de forma coordenada
+
+```java
+ScopedValue.where(CONTEXT, ctx).run(() -> {
+    try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+        scope.fork(this::taskA);
+        scope.fork(this::taskB);
+        scope.join();
+    }
+});
+```
