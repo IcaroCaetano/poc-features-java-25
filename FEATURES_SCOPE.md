@@ -232,5 +232,17 @@ ScopedValue.where(CONTEXT, ctx).run(() -> {
     }
 });
 ```
+#### 6️⃣ ScopedValue é um “parâmetro implícito”
 
+Uma boa forma de pensar é:
+
+ScopedValue funciona como se todos os métodos da call stack recebessem um parâmetro extra que não aparece na assinatura.
+
+Mas com vantagens importantes:
+
+- só quem tem acesso ao ScopedValue consegue ler o valor
+  
+- métodos intermediários não precisam conhecer o contexto
+  
+- o fluxo é auditável pelo código
 
