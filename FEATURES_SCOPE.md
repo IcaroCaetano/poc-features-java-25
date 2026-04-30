@@ -169,4 +169,16 @@ ScopedValue.where(CONTEXT, value).run(() -> {
 #### 3️⃣ Imutabilidade por design
 
 Com Scoped Values, você sempre declara onde o valor nasce.
-Nada de “alguém setou isso em algum lugar”:
+Nada de “alguém setou isso em algum lugar”
+
+O código deixa claro:
+• onde o contexto começa
+• até onde ele é válido
+• quando ele é automaticamente descartado
+
+📌 Isso elimina uma das maiores fontes de bugs com ThreadLocal:
+o contexto que continua existindo depois que não deveria.
+
+
+
+
