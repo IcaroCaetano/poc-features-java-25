@@ -195,3 +195,21 @@ Depois que um ScopedValue é associado a um valor:
 RequestContext ctx = CONTEXT.get();
 ```
 
+#### 4️⃣ Funciona naturalmente com Virtual Threads
+
+Como o vínculo é com o escopo de execução, e não com a thread:
+
+- Virtual Threads herdam automaticamente o contexto
+- não há cópia de dados
+- não há custo elevado de propagação
+- o comportamento é consistente
+
+Exemplo:
+
+```java
+ScopedValue.where(CONTEXT, ctx).run(() -> {
+    Thread.startVirtualThread(() -> {
+        // CONTEXT.get() funciona
+    });
+});
+```
