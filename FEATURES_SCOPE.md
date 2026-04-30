@@ -167,3 +167,6 @@ ScopedValue.where(CONTEXT, value).run(() -> {
 ```
 
 #### 3️⃣ Imutabilidade por design
+
+Com Scoped Values, você sempre declara onde o valor nasce.
+Nada de “alguém setou isso em algum lugar”:
