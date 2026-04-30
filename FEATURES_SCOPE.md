@@ -179,6 +179,14 @@ O código deixa claro:
 📌 Isso elimina uma das maiores fontes de bugs com ThreadLocal:
 o contexto que continua existindo depois que não deveria.
 
+#### 3️⃣ Imutabilidade por design
 
+Depois que um ScopedValue é associado a um valor:
+
+• 🧊 ele não pode ser alterado
+• ❌ não existe set
+• ❌ não existe remove
+• ✅ só existe get
+RequestContext ctx = CONTEXT.get();
 
 
