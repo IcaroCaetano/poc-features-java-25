@@ -184,9 +184,14 @@ o contexto que continua existindo depois que não deveria.
 Depois que um ScopedValue é associado a um valor:
 
 • 🧊 ele não pode ser alterado
-• ❌ não existe set
-• ❌ não existe remove
-• ✅ só existe get
-RequestContext ctx = CONTEXT.get();
 
+• ❌ não existe set
+
+• ❌ não existe remove
+
+• ✅ só existe get
+
+```java
+RequestContext ctx = CONTEXT.get();
+```
 
